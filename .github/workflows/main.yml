@@ -1,1 +1,9 @@
 name: github workflow
+on: push
+jobs:
+    first_job:
+        runs_on: ubuntu-latest
+        steps:
+        - name: Welcome Message
+          run: echo "My first file"
+
