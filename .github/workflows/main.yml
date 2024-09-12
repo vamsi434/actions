@@ -6,4 +6,8 @@ jobs:
         steps:
         - name: Welcome Message
           run: echo "My first file"
-
+        - name: List the file
+          run: echo "ls -la"
+        - name: display readme file
+          run: cat README.md
+          
