@@ -9,7 +9,7 @@ jobs:
         - name: Welcome Message
           run: echo "My first file"
         - name: List the file
-          run: echo "ls -la"
+          run: ls
         - name: display readme file
           run: echo "Hi Vamsi"
 
