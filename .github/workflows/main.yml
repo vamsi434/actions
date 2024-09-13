@@ -7,11 +7,11 @@ jobs:
         - name: checkout repo
           uses: actions/checkout@v4
         - name: Welcome Message
-          run: touch ${{ secrets.FILE_NAME }}
+          run: touch ${{ vars.USER_NAME }}
         - uses: actions/upload-artifact@v4
           with:
             name: sample-artifact
-            path: ${{ secrets.FILE_NAME }}
+            path: ${{ vars.USER_NAME }}
     second_job:
        needs: first_job
        runs-on: ubuntu-latest
