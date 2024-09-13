@@ -7,12 +7,12 @@ jobs:
         - name: checkout repo
           uses: actions/checkout@v4
         - name: Welcome Message
-          run: cat vamsi.txt
+          run: touch vamsi.txt
     second_job:
        needs: first_job
        runs-on: ubuntu-latest
        steps:
         - name: display cat file
           run: cat vamsi.txt
-          
+
 
