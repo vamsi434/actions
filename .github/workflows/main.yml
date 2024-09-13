@@ -9,7 +9,9 @@ jobs:
         - name: Welcome Message
           run: echo "My first file"
         - name: List the file
-          run: ls
-        - name: display readme file
-          run: echo "Hi Vamsi"
+          run: |
+              echo " Hi Vamsi"
+              ls -ltr
+              cat README.md
+       
 
