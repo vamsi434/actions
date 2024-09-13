@@ -13,5 +13,7 @@ jobs:
               echo " Hi Vamsi"
               ls -ltr
               cat README.md
+        - name: run shell script
+          run: sh shell-script-asc.sh
        
 
