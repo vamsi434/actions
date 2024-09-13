@@ -8,11 +8,18 @@ jobs:
           uses: actions/checkout@v4
         - name: Welcome Message
           run: touch vamsi.txt
+        - uses: actions/upload-artifact@v4
+          with:
+            name: sample-artifact
+            path: vamsi.txt
     second_job:
        needs: first_job
        runs-on: ubuntu-latest
        steps:
-        - name: display cat file
-          run: cat vamsi.txt
+        - uses: actions/download-artifact@v4
+          with:
+           name: sample-artifact
+        - name: Display structure of downloaded files
+          run: ls -R
 
 
