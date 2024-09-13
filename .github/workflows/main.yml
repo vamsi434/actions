@@ -7,13 +7,12 @@ jobs:
         - name: checkout repo
           uses: actions/checkout@v4
         - name: Welcome Message
-          run: echo "My first file"
-        - name: List the file
-          run: |
-              echo " Hi Vamsi"
-              ls -ltr
-              cat README.md
-        - name: run shell script
-          run: sh shell-script-asc.sh
-       
+          run: cat vamsi.txt
+    second_job:
+       needs: first_job
+       runs-on: ubuntu-latest
+       steps:
+        - name: display cat file
+          run: cat vamsi.txt
+          
 
